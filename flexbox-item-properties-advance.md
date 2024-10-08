@@ -1,5 +1,10 @@
 # ¿Como Flexbox calcula el tamaño de los elementos?
-Lo primero que flexbox hace en su valor por defecto es mirar el tamaño del contenido para ocupar el tamaño maximo de el(max-content). El valor max-content hace que un texto ocupe el espacio necesario para no crear saltos de linea pero en flexbox cuando un item tiene demasiado contenido (En este caso texto) el width sera encogido para respetar el width del contenedor con ancho definido (Ya sea width o flex-basis) mas cercano a el o el del body.
+Lo primero que flexbox hace en su valor por defecto es mirar el tamaño del contenido para ocupar el tamaño maximo de el(max-content). El valor max-content hace que un texto ocupe el espacio necesario para no crear saltos de linea pero en flexbox cuando un item tiene demasiado contenido (En este caso texto) el width sera encogido para respetar el width del contenedor con ancho definido (Ya sea width o flex-basis) mas cercano a el o el del body (Esto siempre que el flex-shrink tenga un valor distinto de 0).
+
+## Funcionamiento de flex-grow:
+flex-grow es una propiedad de Flexbox que determina cómo un flex-item (Elemento dentro del contenedor flex) puede crecer para ocupar el espacio adicional en su contenedor. Se define como un número que representa la proporción de espacio que cada elemento debe ocupar. Cuando hay espacio disponible, Flexbox utiliza este valor para calcular cuánto crecerá cada elemento en relación con los demás.
+
+Formula que utiliza: Espacio disponible * (valor de flex-grow / suma de todos los valores flex-grow)
 
 ## ¿Como flex-shrink decide que tanto encoger cada flex-item?
 flex-shrink toma el ancho del contenedor con ancho definido o body y lo distribuye entre todos los items dependiendo su tamaño establecido o el valor que se le haya dado a la propiedad flex-shrink.
