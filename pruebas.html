@@ -14,32 +14,32 @@
 
         body {
             min-height: 100vh;
-            display: grid;
-            place-items: center;
+            display: flex;
         }
 
         .contenedor {
-            width: 1000px;
+            width: 600px;
             height: 100%;
             display: flex;
-            align-content: center;
-            flex-direction: column;
+        }
+
+        .contenedor > div {
+            flex-basis: 100%;
+            flex-shrink: 1;
         }
 
         .red {
             background-color: red;
-            flex-basis: 70%;
         }
 
         .blue {
             background-color: blue;
-            flex-basis: 50%;
+            padding: 1rem;
         }
 
-        /* .green {
+        .green {
             background-color: green;
-            flex-basis: 50%;
-        } */
+        }
 
     </style>
 </head>
@@ -47,7 +47,7 @@
     <div class="contenedor">
         <div class="item red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit libero, laudantium quaerat labore minus accusamus recusandae nemo tenetur molestias esse cumque veniam. Eos voluptates nesciunt aperiam molestias molestiae ipsum est?red</div>
         <div class="item blue">blue</div>
-        <!-- <div class="item green">green</div> -->
+        <div class="item green">green</div>
     </div>
 </body>
 </html>
